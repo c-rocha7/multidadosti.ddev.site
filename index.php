@@ -2,6 +2,11 @@
 
 require_once __DIR__ . '/header.php';
 require_once __DIR__ . '/menu.php';
+require_once __DIR__ . '/DataRequest.php';
+
+$dados_clientes = (new DataRequest)->dadosClientes();
+$dados_usuarios = (new DataRequest)->dadosUsuarios();
+$dados_fornecedores = (new DataRequest)->dadosFornecedores();
 
 ?>
 
@@ -83,7 +88,7 @@ require_once __DIR__ . '/menu.php';
 						<i class="fa fa-shopping-cart"></i>
 					</div>
 					<div class="details">
-						<div class="number">1349</div>
+						<div class="number"><?= $dados_clientes ?></div>
 						<div class="desc">Clientes</div>
 					</div>
 					<a class="more" href="#">
@@ -97,7 +102,7 @@ require_once __DIR__ . '/menu.php';
 						<i class="fa fa-group"></i>
 					</div>
 					<div class="details">
-						<div class="number">549</div>
+						<div class="number"><?= $dados_usuarios ?></div>
 						<div class="desc">Usuários</div>
 					</div>
 					<a class="more" href="#">
@@ -111,7 +116,7 @@ require_once __DIR__ . '/menu.php';
 						<i class="fa fa-globe"></i>
 					</div>
 					<div class="details">
-						<div class="number">89</div>
+						<div class="number"><?= $dados_fornecedores ?></div>
 						<div class="desc">Fornecedores</div>
 					</div>
 					<a class="more" href="#">
