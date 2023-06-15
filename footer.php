@@ -53,6 +53,21 @@
       jQuery(document).ready(function () {
         App.init(); // initlayout and core plugins
         Index.init();
+
+        $('#click_cliente').click(function() {
+          $('#tabela_simples').removeClass('grey blue green purple');
+          $('#tabela_simples').addClass('blue');
+        });
+
+        $('#click_usuario').click(function() {
+          $('#tabela_simples').removeClass('grey blue green purple');
+          $('#tabela_simples').addClass('green');
+        });
+
+        $('#click_fornecedor').click(function() {
+          $('#tabela_simples').removeClass('grey blue green purple');
+          $('#tabela_simples').addClass('purple');
+        });
       });
     </script>
     <!-- END JAVASCRIPTS -->
