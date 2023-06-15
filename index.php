@@ -91,7 +91,7 @@ $dados_fornecedores = (new DataRequest)->dadosFornecedores();
 						<div class="number"><?= $dados_clientes ?></div>
 						<div class="desc">Clientes</div>
 					</div>
-					<a class="more" href="#">
+					<a class="more" href="#" id="click_cliente">
 						Visualizar <i class="m-icon-swapright m-icon-white"></i>
 					</a>
 				</div>
@@ -105,7 +105,7 @@ $dados_fornecedores = (new DataRequest)->dadosFornecedores();
 						<div class="number"><?= $dados_usuarios ?></div>
 						<div class="desc">Usuários</div>
 					</div>
-					<a class="more" href="#">
+					<a class="more" href="#" id="click_usuario">
 						Visualizar <i class="m-icon-swapright m-icon-white"></i>
 					</a>
 				</div>
@@ -119,7 +119,7 @@ $dados_fornecedores = (new DataRequest)->dadosFornecedores();
 						<div class="number"><?= $dados_fornecedores ?></div>
 						<div class="desc">Fornecedores</div>
 					</div>
-					<a class="more" href="#">
+					<a class="more" href="#" id="click_fornecedor">
 						Visualizar <i class="m-icon-swapright m-icon-white"></i>
 					</a>
 				</div>
@@ -131,7 +131,7 @@ $dados_fornecedores = (new DataRequest)->dadosFornecedores();
 		<div class="row">
 			<div class="col-md-12">
 				<!-- BEGIN SAMPLE TABLE PORTLET-->
-				<div class="portlet box grey">
+				<div class="portlet box grey" id="tabela_simples">
 					<div class="portlet-title">
 						<div class="caption">
 							<i class="fa fa-folder-open"></i>Tabela Simples
