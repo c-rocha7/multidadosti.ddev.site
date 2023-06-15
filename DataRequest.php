@@ -116,12 +116,11 @@ class DataRequest {
      * @param string recebe 'c' ou vazio
      * @return array||String
      */
-    public function dadosClientes($param = '') {
-        if($param === 'c') {
-            return count($this->DadosClientes);
-        } else {
-            return $this->DadosClientes;
+    public function dadosClientes() {
+        if (empty($this->DadosClientes)) {
+            return 0;
         }
+        return count($this->DadosClientes);
     }
     
     /**
@@ -130,11 +129,10 @@ class DataRequest {
      * @return array||String
      */
     public function dadosFornecedores($param = '') {
-        if($param === 'c') {
-            return count($this->DadosFornecedores);
-        } else {
-            return $this->DadosFornecedores;
+        if (empty($this->DadosFornecedores)) {
+            return 0;
         }
+        return count($this->DadosFornecedores);
     }
 
     /**
@@ -143,10 +141,9 @@ class DataRequest {
      * @return array||String
      */
     public function dadosUsuarios($param = '') {
-        if($param === 'c') {
-            return count($this->DadosUsuarios);
-        } else {
-            return $this->DadosUsuarios;
+        if (empty($this->DadosUsuarios)) {
+            return 0;
         }
+        return count($this->DadosUsuarios);
     }
 }
