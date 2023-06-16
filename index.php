@@ -8,6 +8,10 @@ $dados_clientes = (new DataRequest)->dadosClientes();
 $dados_usuarios = (new DataRequest)->dadosUsuarios();
 $dados_fornecedores = (new DataRequest)->dadosFornecedores();
 
+$count_clientes = count($dados_clientes);
+$count_usuarios = count($dados_usuarios);
+$count_fornecedores = count($dados_fornecedores);
+
 ?>
 
 <!-- BEGIN CONTENT -->
