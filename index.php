@@ -92,7 +92,7 @@ $count_fornecedores = count($dados_fornecedores);
 						<i class="fa fa-shopping-cart"></i>
 					</div>
 					<div class="details">
-						<div class="number"><?= $dados_clientes ?></div>
+						<div class="number"><?= $count_clientes ?></div>
 						<div class="desc">Clientes</div>
 					</div>
 					<a class="more" href="#" id="click_cliente">
@@ -106,7 +106,7 @@ $count_fornecedores = count($dados_fornecedores);
 						<i class="fa fa-group"></i>
 					</div>
 					<div class="details">
-						<div class="number"><?= $dados_usuarios ?></div>
+						<div class="number"><?= $count_usuarios ?></div>
 						<div class="desc">Usuários</div>
 					</div>
 					<a class="more" href="#" id="click_usuario">
@@ -120,7 +120,7 @@ $count_fornecedores = count($dados_fornecedores);
 						<i class="fa fa-globe"></i>
 					</div>
 					<div class="details">
-						<div class="number"><?= $dados_fornecedores ?></div>
+						<div class="number"><?= $count_fornecedores ?></div>
 						<div class="desc">Fornecedores</div>
 					</div>
 					<a class="more" href="#" id="click_fornecedor">
