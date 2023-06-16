@@ -154,7 +154,7 @@ $count_fornecedores = count($dados_fornecedores);
 					<div class="portlet-body">
 						<div class="table-responsive">
 							<table class="table table-hover">
-								<thead>
+								<thead id="tabela_simples_thead">
 									<tr>
 										<th>#</th>
 										<th>Nome</th>
@@ -163,51 +163,51 @@ $count_fornecedores = count($dados_fornecedores);
 										<th>Status</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>Mark</td>
-										<td>Otto</td>
-										<td>makr124</td>
-										<td>
-											<span class="label label-sm label-success">
-												Aprovado
-											</span>
-										</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>Jacob</td>
-										<td>Nilson</td>
-										<td>jac123</td>
-										<td>
-											<span class="label label-sm label-info">
-												Pendente
-											</span>
-										</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>Larry</td>
-										<td>Cooper</td>
-										<td>lar</td>
-										<td>
-											<span class="label label-sm label-warning">
-												Suspenso
-											</span>
-										</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>Sandy</td>
-										<td>Lim</td>
-										<td>sanlim</td>
-										<td>
-											<span class="label label-sm label-danger">
-												Bloqueado
-											</span>
-										</td>
-									</tr>
+								<tbody id="tabela_simples_tbody">
+								<tr>
+									<td>1</td>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>makr124</td>
+									<td>
+										<span class="label label-sm label-success">
+											Aprovado
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Jacob</td>
+									<td>Nilson</td>
+									<td>jac123</td>
+									<td>
+										<span class="label label-sm label-info">
+											Pendente
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Larry</td>
+									<td>Cooper</td>
+									<td>lar</td>
+									<td>
+										<span class="label label-sm label-warning">
+											Suspenso
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Sandy</td>
+									<td>Lim</td>
+									<td>sanlim</td>
+									<td>
+										<span class="label label-sm label-danger">
+											Bloqueado
+										</span>
+									</td>
+								</tr>
 								</tbody>
 							</table>
 						</div>
