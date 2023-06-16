@@ -54,19 +54,95 @@
         App.init(); // initlayout and core plugins
         Index.init();
 
-        $('#click_cliente').click(function() {
+        function processarResponse(response) {
+          $('#tabela_simples_thead').find('tr, th').remove();
+          $('#tabela_simples_tbody').find('tr, td, span').remove();
+          
+          let info = JSON.parse(response);
+          let array_titulos = [];
+          let tag_thead = '<tr><th>#</th>';
+          let tag_tbody = '';
+          let numero_linha = 1;
+          info.forEach(element => {
+            tag_tbody += '<tr>';
+            
+            for (var titulo_tabela in element) {
+              if (!array_titulos.includes(titulo_tabela)) {
+                array_titulos.push(titulo_tabela);
+              }
+            }
+
+            tag_tbody += `<td>${numero_linha}</td>`;
+
+            array_titulos.forEach(key => {
+              tag_tbody += `<td>${element[key]}</td>`;
+            });
+
+            tag_tbody += '</tr>';
+            numero_linha += 1;
+          });
+          
+          array_titulos.forEach(titulo => {
+            titulo = formatarTitulo(titulo);
+            tag_thead += `<th>${titulo}</th>`;
+          });
+          
+          tag_thead += '</tr>';
+          
+          $('#tabela_simples_thead').append(tag_thead);
+          $('#tabela_simples_tbody').append(tag_tbody);
+        }
+
+        function removerClass() {
           $('#tabela_simples').removeClass('grey blue green purple');
+        }
+
+        $('#click_cliente').click(function() {
+          removerClass();
           $('#tabela_simples').addClass('blue');
+          $.ajax({
+            url: 'cliente.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function(response){
+              processarResponse(response);
+            },
+            error: function(){
+              console.log('Error');
+            }
+          });
         });
 
         $('#click_usuario').click(function() {
-          $('#tabela_simples').removeClass('grey blue green purple');
+          removerClass();
           $('#tabela_simples').addClass('green');
+          $.ajax({
+            url: 'usuario.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function(response){
+              processarResponse(response)
+            },
+            error: function(){
+              console.log('Error');
+            }
+          });
         });
 
         $('#click_fornecedor').click(function() {
-          $('#tabela_simples').removeClass('grey blue green purple');
+          removerClass();
           $('#tabela_simples').addClass('purple');
+          $.ajax({
+            url: 'fornecedor.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function(response){
+              processarResponse(response)
+            },
+            error: function(){
+              console.log('Error');
+            }
+          });
         });
       });
     </script>
