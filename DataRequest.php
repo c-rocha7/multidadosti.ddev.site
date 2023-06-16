@@ -118,9 +118,9 @@ class DataRequest {
      */
     public function dadosClientes() {
         if (empty($this->DadosClientes)) {
-            return 0;
+            return [];
         }
-        return count($this->DadosClientes);
+        return $this->DadosClientes;
     }
     
     /**
@@ -130,9 +130,9 @@ class DataRequest {
      */
     public function dadosFornecedores($param = '') {
         if (empty($this->DadosFornecedores)) {
-            return 0;
+            return [];
         }
-        return count($this->DadosFornecedores);
+        return $this->DadosFornecedores;
     }
 
     /**
@@ -142,8 +142,8 @@ class DataRequest {
      */
     public function dadosUsuarios($param = '') {
         if (empty($this->DadosUsuarios)) {
-            return 0;
+            return [];
         }
-        return count($this->DadosUsuarios);
+        return $this->DadosUsuarios;
     }
 }
