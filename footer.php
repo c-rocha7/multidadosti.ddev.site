@@ -54,6 +54,25 @@
         App.init(); // initlayout and core plugins
         Index.init();
 
+        function formatarTitulo(titulo) {
+          switch (titulo) {
+            case 'cpf':
+              titulo = 'CPF';
+              break;
+            case 'endereco':
+              titulo = 'Endereço';
+              break;
+            case 'usuario':
+              titulo = 'Usuário';
+              break;
+            default:
+              titulo = titulo.charAt(0).toUpperCase() + titulo.slice(1);
+              break;
+          }
+          
+          return titulo;
+        }
+
         function processarResponse(response) {
           $('#tabela_simples_thead').find('tr, th').remove();
           $('#tabela_simples_tbody').find('tr, td, span').remove();
